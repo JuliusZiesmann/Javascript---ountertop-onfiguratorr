@@ -1,0 +1,298 @@
+body {
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-color: rgb(0, 168, 181);
+    
+    color: white;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+.scale {
+    display: inline-block; /* Строчно-блочный элемент */
+    overflow: hidden; /* Скрываем всё за контуром */
+   }
+   .scale img {
+    transition: 1s; /* Время эффекта */
+    display: block; /* Убираем небольшой отступ снизу */
+   }
+   .scale img:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+   }
+   
+.menu {
+    
+    overflow: hidden;
+    background-color: rgb(28, 34, 37);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.center {
+    overflow: auto;
+    background-color: rgb(13, 15, 17);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 80px 16px;
+    text-align: center;
+}
+
+.menu a {
+    
+    float: right;
+    font-size: 16px;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu3 {
+    background-color: rgb(13, 15, 17);
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: stretch;    
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+}
+
+.menu2 {
+    overflow: hidden;
+    background-color: rgb(13, 15, 17);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.menu2 a {
+    
+    float: right;
+    font-size: 16px;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    
+    background-color:  rgb(0, 168, 181);
+    transform: scale(1.1);
+    transition: 1s;
+    display: inline-block;
+    overflow: hidden;
+}
+.menu2 a:hover {
+    
+    background-color: rgb(0, 168, 181);
+    transform: scale(1.1);
+    transition: 1s;
+    display: inline-block;
+    overflow: hidden;
+}
+.dropdown {
+    text-align: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    text-align: left;
+    font-size: 20px;    
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    
+}
+
+.menu a:hover, .dropdown:hover .dropbtn  {
+    
+    
+    transform: scale(1.1);
+    transition: 1s;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.dropdown-content {
+    
+    display: inherit;
+    text-align: left;
+    position: absolute;
+    background-color: rgb(13, 15, 17);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(245, 248, 248, 0.957);
+    z-index: 1;
+    
+    
+    
+}
+
+.dropdown-content a {
+    text-align: center;
+    float: inline-start;
+    color: rgb(0, 168, 181);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: white;
+    
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(0, 168, 181);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    
+   
+}
+.button {
+    height: 2rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    transition: all .1s;
+    transition-delay: .1s;
+    }
+.button:hover {
+    cursor: pointer;
+}
+
+.menuContent {
+    background-color: rgb(13, 15, 17);
+    font-weight: 1000;
+}
+
+.left {
+    width: 50%;
+    min-height: 120px;
+    text-decoration: solid;
+    font-size: 1.1rem;
+    text-align: left;
+    margin-left:20px;
+}
+.right {
+    width: 60%;
+    min-height: 90px;
+    float: right;
+    margin-left: 5px;
+    margin-right: 20px;
+    }
+.footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: stretch; 
+    /* flex-flow: nowrap; */  
+    flex-wrap: nowrap; 
+    align-content: stretch;
+    text-align: center;
+    background-color: rgb(28, 34, 37);
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+}
+    
+.footer > div{
+    background: rgb(28, 34, 37);
+    padding: 8px;
+    text-align: center;
+    color: #fff;
+    text-decoration: solid;
+}
+.footer  a {
+    color: white;
+    text-align: left;
+    margin-left: 2cm;
+}
+.footer a:hover {color:  rgb(0, 168, 181);transform: scale(1.1);
+    transition: 1s;
+    display: inline-block;
+    overflow: hidden;}
+.footer p {padding: 2px;text-align: center;}
+.item3 {
+    margin-right: 20px;
+}
+.clearfloat {clear: both;}
+
+.btn {
+    background-color: rgb(0, 168, 181);
+    border: none;
+    color: white;
+    padding: 13px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+.btn:hover {
+    background-color: white;
+    color: rgb(0, 168, 181);
+    font-size: 19px;
+    color: black;
+  }
+
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: Arial;
+}
+  
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+  
+.select-selected {
+    background-color: rgb(0, 168, 181);
+}
+  
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+  
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+  
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+  
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: rgb(0, 168, 181);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+  
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+  
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+input[type='checkbox']:checked {
+    accent-color: rgb(0, 168, 181);
+  }
+
+

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+</ruby>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Julius Ziesmann" content="juZIus">
+    <link rel="shortcut icon" type="image/x-icon" href="images\LG 3.ico"> 
+    <link rel="apple-touch-icon" sizes="128x128" href="images\LG 3.ico"> 
+    <link rel="shortcut icon" sizes="128x128" href="images\LG 3.ico">
+    <link rel="stylesheet" href="scripts\css\javascript.css">
+    <title>juZIus</title>
+    <style>
+        li {
+            list-style-type: none;
+        }
+        ul {
+            padding-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <a href= "blog.html" >Blog</a>
+        <a href="author.html">Über Autor</a>
+        <a href="index.html">Home</a>
+        <a class="scale" style="float:left; margin-top:2px; margin-right:40px;"><img src="images\LOGO4.jpg" width="120" height="55"></a>
+    </div>
+    <div class="menu2">
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+            
+              <a href="it\aufgaben.html">Site</a>
+              <a href="java.html">Java</a>
+              <a href="C_sharp.html">C#</a>
+              
+            </div>
+        </div><br><br><br>
+        <h1>...Tischplatten - Konfigurator...</h1>
+        <div></div><br>
+        
+    </div>
+    <div class="menu3"> 
+        <div>
+            <p>Form:</p>
+            <img id="bildA" width="230" height="180" src="images\javascriptPriject\tisch.jpeg.jpg">
+            <p>Rissanteil:</p>
+            <img id="bildB" width="230" height="180" src="images\javascriptPriject\tisch.jpeg.jpg">
+            <p>Finish:</p>
+            <img id="bildC" width="230" height="180" src="images\javascriptPriject\tisch.jpeg.jpg">
+        </div><br>
+        <div>
+            <div><p>Wählen Sie bitte Tischplatte</p>
+                <input type="text" list="vollList" id="voll"  onfocus="this.value=''" value=""; style="width:192px; height: 35px; color:black;font-family: Verdana; font-weight: bold; font-size: 15px; background-color:rgb(0, 168, 181)">
+                <datalist id="vollList">
+                    <option value="Vollmassiv">
+                    <option value="Optisch gedoppelt">
+                </datalist>
+            </div><br>
+            <p>Form:</p>
+            <div>
+                <input type="text" list="formList" id="formInput" onchange="ImageA()" onfocus="this.value=''" value=""; style="width:192px; height: 35px; color:black;font-family: Verdana; font-weight: bold; font-size: 15px; background-color:rgb(0, 168, 181)">
+                <datalist id="formList">
+                    <option value="Gerade Kante">
+                    <option value="Facettenkante">
+                    <option value="Mit Baumkant">
+                    <option value="Durchgängige Bohlen">
+                    <option value="Mit Querfrieß">
+                    <option value="Rund">
+                    <option value="Oval">
+                    <option value="Schiffsbodenmuster">
+                    <option value="Flechtmuster">
+                    <option value="Rautenmuster">
+                </datalist>
+            </div>
+            <p>Rissanteil</p>
+            <div>
+                <input type="text" list="rissanteilList" id="rissanteilInput" onchange="ImageB()" style="width:192px; height: 35px; color:black;font-family: Verdana; font-weight: bold; font-size: 15px; background-color:rgb(0, 168, 181)" onfocus="this.value=''" value="">
+                <datalist id="rissanteilList">
+                    <option value="Leichter Rissanteil">
+                    <option value="Normaler Rissanteil">
+                    <option value="Reine Balken Außenseiten">
+                </datalist>
+            </div>
+            <p>Farbe:</p>
+            <div>
+                <input type="text" list="farbeList" style="width:192px; height: 35px; color:black;font-family: Verdana; font-weight: bold; font-size: 15px; background-color:rgb(0, 168, 181)" onfocus="this.value=''" value="">
+                <datalist id="farbeList">
+                    <option value="Natura">
+                    <option value="Alte Eiche">
+                    <option value="Eiche dunkel">
+                    <option value="Hellgrau geölt">
+                    <option value="Dunkelgrau geölt">
+                    <option value="Weiss geölt">
+                    <option value="Weiss gekälkt">
+                </datalist>
+            </div>
+            <p>Finish</p>
+            <div>
+                <input type="text" list="finishList" id="finishInput" onchange="ImageC()" style="width:192px; height: 35px; color:black;font-family: Verdana; font-weight: bold; font-size: 15px; background-color:rgb(0, 168, 181)" onfocus="this.value=''" value="">
+                <datalist id="finishList">
+                    <option value="Mattlack">
+                    <option value="Hartöl">
+                    <option value="Äste/Risse schwarz verfüllt">
+                </datalist>
+            </div>
+            <p>Breite (in cm)</p>
+            <div class="breite">
+                <input type="number" id="breite" min="0" max="180" style="width:192px; height: 35px; color:black;font-family: Verdana; font-weight: bold; font-size: 15px; background-color:rgb(0, 168, 181)" onfocus="this.value=''" value="">
+            </div>
+            <p>Länge (in cm)</p>
+            <div class="custom-select" style="width:200px;">
+                <div class="laenge">
+                    <input type="number" id="laenge" min="0" max="450" style="width:192px; height: 35px; color:black;font-family: Verdana; font-weight: bold; font-size: 15px; background-color:rgb(0, 168, 181)" onfocus="this.value=''" value="">
+                </div>
+            </div>
+            <p>Stärke (in cm)</p>
+            <div class="custom-select" style="width:200px;">
+                <div class="staerke">
+                    <input type="text" list="staerkeList" id="preis" style="width:192px; height: 35px; color:black;font-family: Verdana; font-weight: bold; font-size: 15px; background-color:rgb(0, 168, 181)" onfocus="this.value=''" value="">
+                    <datalist id="staerkeList">
+                        <option value="2.5 cm">
+                        <option value="3.0 cm">
+                        <option value="4.0 cm">
+                        <option value="5.0 cm">
+                        <option value="6.0 cm">
+                        <option value="7.0 cm">
+                        <option value="8.0 cm">
+                        <option value="9.0 cm">
+                        <option value="10.0 cm">
+                        <option value="11.0 cm">
+                        <option value="12.0 cm">
+                    </datalist>
+                </div>
+            </div>
+        </div><br><br>
+    </div>
+    <div class="center">
+        <h2>Preis Berechnen: </h2>
+        <div id="ausgabe" style="color:azure; font-size: 25px;"></div>
+        <p>
+            <a>
+                <button class="btn" onclick="Berechnen()" style="width:10%" >PREIS</button>
+            </a><br><br>  
+        </p>
+        <div id="fehler" style="color:azure; font-size: 25px;">
+    </div>
+        
+    </div>
+    <footer>
+        <div class="footer">
+   
+            <div class="item1">
+                <ul><br>
+                    <li><br><a href= "C_sharp.html">C#</a></li>
+                    <li><br><a href="java.html">Java</a></li> 
+                    <li><br><a href= "author.html">Über Autor</a></li>
+                    <li><br><a href= "blog.html" >Blog</a></li>
+                 </ul>
+            </div>
+            <div class="item2">
+                <ul><br><br><br>
+                    <li><br><a href= "impressum.html">IMPRESSUM</a><br><br><a href= "datenschutz.html" >DATENSCHUTZ</a></li><br>
+                    <li><a>Copyright Company juZIus © 2023. All rights reserved.</a></li><br>
+                    <li><a href = "index.html"><img src="images\LOGO4.jpg" width="120" height="40"></a></li>
+                </ul>
+            </div><br><br>
+            <div class="item3">
+                <ul><br><br>
+                    <li>
+                        <li><a href = "https://github.com/JuliusZiesmann"><img src="images\igithub.png" width="48" height="48">GitHub</a>&nbsp&nbsp&nbsp&nbsp</li>
+                    </li><br>
+                    <li>
+                        <li><a href = "https://www.facebook.com/JuliusZiesmann"><img src="images\facebook.png" width="48" height="48">Facebook</a></li>
+                    </li><br>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts\js\js-project.js"></script>
+</body>
+</html>
